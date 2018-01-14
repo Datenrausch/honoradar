@@ -166,7 +166,7 @@
 
 <!-- Switch-Select -->	
 <form id="data_1">
-  <div class="switch-field">
+  <div class="switch-field switch-field-text-1">
       <input type="radio" id="data_2" name="switch" value="fest" checked/>
       <label for="data_2">Fest</label>
       <input type="radio" id="data_3" name="switch" value="pauschal"/>
@@ -183,14 +183,14 @@
 </span>
 
 <!-- Hour-Week-Select -->	
-<div class="range-box-1 hide">
+<div class="range-box-1 show">
 <div class="hour-week-select">
 	<input id="data_6" type="range" min="1" max="50" value="1">
 </div>
 </div>
 
 <!-- Day-Month-Hour-Day-Select -->	
-<div class="range-box-2 show">
+<div class="range-box-2 hide">
 	<div class="day-month-select">
 	<input id="data_7" type="range" min="1" max="30" value="1" >
 	</div>
@@ -236,11 +236,11 @@
 
 <!-- Hour-Week-Select -->	
 <form id="data_6">
-  <div class="switch-field">
+  <div class="switch-field switch-field-text-2">
       <input type="radio" id="data_17" name="switch" value="1"/>
-      <label for="data_17">1 Jahr</label>
+      <label for="data_17">bis 1 Jahr</label>
       <input type="radio" id="data_18" name="switch" value="3"/>
-      <label for="data_18">3 Jahre</label>
+      <label for="data_18">bis 3 Jahre</label>
       <input type="radio" id="data_19" name="switch" value="5" checked/>
       <label for="data_19">über 5 Jahre</label>
   </div>
@@ -253,17 +253,14 @@
 	</div>
 </div>
 
+<div class="break"></div>
 
-
-
-
-<form action="/action_page.php" class="hide">
-  <textarea name="message" style="width:200px; height:600px;">The cat was playing in the garden.</textarea>
-  <br>
-  <input type="submit">
+<!-- Comment-Select -->	
+<form action="/action_page.php" class="show">
+  <textarea id="data_21" class="comment-select show" name="message" placeholder="Dein Kommentar ..."></textarea>
 </form>
 
-
+<input type="submit" class="submit" value="Daten spenden">
 
 </div>	
 

@@ -35,6 +35,7 @@ main {
 	flex: auto;
 	margin: 30px 2.5% 30px 2.5%;
 	padding: 30px 0px 30px 0px;
+	border-radius: 20px;
 }
 
 .get {
@@ -46,6 +47,7 @@ main {
 	flex: auto;
 	margin: 30px 2.5% 30px 2.5%;
 	padding: 30px 0px 30px 0px;
+	border-radius: 20px;
 }
 
 
@@ -539,6 +541,7 @@ a.video span {
   padding: 30px 30px 20px 40px;
   overflow: hidden;
   float: left;
+
 }
 
 .switch-field input {
@@ -593,6 +596,26 @@ a.video span {
   border-radius: 0 4px 4px 0;
 }
 
+
+.switch-field-text-1:before {
+  position: absolute;
+  content: 'Arbeitsverhältnis';
+  display: block;
+  color: white;
+  font-size: 13px;
+  margin: -26px 0% 0px 115px;
+}
+
+.switch-field-text-2:before {
+  position: absolute;
+  content: 'Arbeitserfahrung';
+  display: block;
+  color: white;
+  font-size: 13px;
+  margin: -26px 0% 0px 115px;
+
+}
+
 /*Input-Input Medienauswahl*/
 
 .media-select {
@@ -639,7 +662,10 @@ a.video span {
 /*Input-Input Range-Boxes*/
 
 input[type="range"]::-webkit-slider-thumb{
-  -webkit-appearance:none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline:0px none transparent;
   width:18px;
   height:18px;
   border-radius: 100%;
@@ -730,7 +756,6 @@ input[type="range"]::-webkit-slider-thumb{
 	min-width: 250px;
 	float: left;
 	position: relative;
- 
 }
 
 @media (min-width: 100px)  { 
@@ -782,7 +807,10 @@ input[type="range"] {
   background: #2ecc71;
   background-position:center;
   background-repeat:no-repeat;
-  -webkit-appearance:none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline:0px none transparent;
   border-radius: 25px;
 }
 
@@ -798,23 +826,23 @@ input[type="range"]:before {
 
 .hour-week-select input[type="range"]:after {
   position: absolute;
-  content: 'Arbeitsstunden pro Woche';
+  content: 'Stunden pro Woche';
   display: block;
-  margin: 35px 0% 0px 30%;
+  margin: 35px 0% 0px 40%;
 }
 
 .day-month-select input[type="range"]:after {
   position: absolute;
-  content: 'Arbeitstage pro Monat ';
+  content: 'Tage pro Monat ';
   display: block;
-  margin: 35px 0% 0px 30%;
+  margin: 35px 0% 0px 43%;
 }
 
 .hour-day-select input[type="range"]:after {
   position: absolute;
-  content: 'Arbeitsstunden pro Tag ';
+  content: 'Stunden pro Tag ';
   display: block;
-  margin: 35px 0% 0px 30%;
+  margin: 35px 0% 0px 42%;
 }
 
 .break {
@@ -995,4 +1023,28 @@ input[type="range"]:before {
   content: 'Atmosphäre in der Redaktion';
   display: block;
   margin: 35px 0% 0px 30%;
+}
+
+/*Comment-Select*/
+
+.comment-select {
+	width: calc(100% - 80px);
+	height: 100px;
+	margin: 40px 30px 0px 40px;
+	font-family: 'Open Sans';
+	font-size: 13px;
+	padding: 20px 30px 10px 30px;
+	color: #243040;
+	border-radius: 10px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+    outline:0px none transparent;
+}
+
+.comment-select:after {
+  position: absolute;
+  content: 'Stunden pro Woche';
+  display: block;
+  margin: 35px 0% 0px 40%;
 }
