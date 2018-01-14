@@ -536,7 +536,7 @@ a.video span {
 
 .switch-field {
   font-family: 'Open Sans';
-  padding: 20px 30px 20px 40px;
+  padding: 30px 30px 20px 40px;
   overflow: hidden;
   float: left;
 }
@@ -597,7 +597,7 @@ a.video span {
 
 .media-select {
   font-family: 'Open Sans';
-  margin: 20px 20px 20px 40px;
+  margin: 30px 20px 20px 40px;
   font-size: 13px;
   width: 220px;
   height: 33px;
@@ -673,7 +673,7 @@ input[type="range"]::-webkit-slider-thumb{
   float: left;
 }
 
-.hours-day-select {
+.hour-day-select {
   width: 10%;
   margin: 20px 30px 20px 40px;
   min-width: 200px;
@@ -691,7 +691,7 @@ input[type="range"]::-webkit-slider-thumb{
   width: 83%;
 }
 
-.hours-day-select {
+.hour-day-select {
   width: 83%;
 }
 }	
@@ -701,7 +701,7 @@ input[type="range"]::-webkit-slider-thumb{
   width: 37%;
 }
 
-.hours-day-select {
+.hour-day-select {
   width: 37%;
 }
 }	
@@ -711,7 +711,7 @@ input[type="range"]::-webkit-slider-thumb{
   width: 83%;
 }
 
-.hours-day-select {
+.hour-day-select {
   width: 83%;
 }
 }	
@@ -721,7 +721,7 @@ input[type="range"]::-webkit-slider-thumb{
   width: 37%;
 }
 
-.hours-day-select {
+.hour-day-select {
   width: 37%;
 }
 }
@@ -775,7 +775,7 @@ input[type="range"] {
   position: relative;
   outline: none;
   margin: 7px 10px;
-  width: 88%;
+  width: calc(100% - 70px);
   color: #fff;
   background: #e74c3c;
   text-align: center;
@@ -789,7 +789,7 @@ input[type="range"] {
 input[type="range"]:before {
   position: absolute;
   bottom: -15%;
-  right: -8.5%;
+  right: -40px;
   content: attr(value);
   display: block;
   text-align: center;
@@ -798,7 +798,7 @@ input[type="range"]:before {
 
 .hour-week-select input[type="range"]:after {
   position: absolute;
-  content: 'Arbeitsstunden pro Woche ';
+  content: 'Arbeitsstunden pro Woche';
   display: block;
   margin: 35px 0% 0px 30%;
 }
@@ -810,7 +810,7 @@ input[type="range"]:before {
   margin: 35px 0% 0px 30%;
 }
 
-.hours-day-select input[type="range"]:after {
+.hour-day-select input[type="range"]:after {
   position: absolute;
   content: 'Arbeitsstunden pro Tag ';
   display: block;
@@ -823,6 +823,176 @@ input[type="range"]:before {
 	height: 0px;
 }
 
+/*Postion-Select not working*/
+
+/*
 
 
+.select {
+  display:flex;
+  flex-direction: column;
+  position:relative;
+  cursor: pointer;
+  border-left: solid 2px #9a9a9a;
+  border-top: solid 2px #9a9a9a;
+  border-right: solid 2px #fff;
+  border-bottom: solid 2px #fff;
+}
 
+
+.option {
+  font-family: 'Open Sans';
+  padding: 0px 0px 0px 30px;
+  min-height:33px;
+  display:flex;
+  align-items:center;
+  background:#fff;
+  position:absolute;
+  top:0;
+  width: 100%;
+  pointer-events:none;
+  order:2;
+  z-index:1;
+  transition:background .4s ease-in-out;
+  box-sizing:border-box;
+  overflow:hidden;
+  white-space:nowrap;
+  width: 200px;
+  border-radius: 4px 4px 4px 4px;
+
+}
+	
+.option:hover {
+  cursor: pointer;
+}
+
+.select:focus .option {
+  position:relative;
+  pointer-events:all;
+    border-radius: 0px;
+}
+
+.selectopt {
+  opacity:0;
+  position:absolute;
+  left:-99999px;
+}
+
+.selectopt:checked + label {
+  order: 1;
+  z-index:2;
+  border-top:none;
+  position:relative;
+}
+
+.selectopt:checked + label:after {
+  content:'';
+  width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid white;
+  position:absolute;
+  right:10px;
+  top:calc(50% - 2.5px);
+  pointer-events:none;
+  z-index:3;
+  display: none;
+}
+
+.selectopt:checked + label:before {
+  position:absolute;
+  right:0;
+  height: 40px;
+  width: 40px;
+  content: '';
+  display: none;
+}
+
+.position-select-overflow {
+    position: relative;  
+	float: left;
+}
+.position-select-overflow:after {
+    position: relative;  
+	float: left;
+    top: 0;
+    content:"€";
+    margin: 22px 0px 0px -49px;
+	font-size: 13px;
+	background: #e3e3e3;
+	padding: 8.5px 9px 8.5px 10px;
+	border-radius: 0px 4px 4px 0px;
+}
+
+*/
+
+/*Position-Select*/
+
+.position-select {
+  font-family: 'Open Sans';
+  margin: 30px 20px 20px 40px;
+  font-size: 13px;
+  width: 220px;
+  height: 33px;
+  border-radius: 4px 4px 4px 4px;
+  float: left;
+  padding-left: 30px;
+
+}
+
+/*Happiness-Select*/
+
+
+.range-box-3 {
+	width: 80%;
+	float: left;
+	position: relative;
+ 
+}
+
+
+@media (min-width: 100px)  { 
+.range-box-3 {
+  width: 83%;
+}
+}
+
+@media (min-width: 848px)  { 
+.range-box-3 {
+  width: 610px;
+}
+}
+
+@media (min-width: 1075px)  { 
+.range-box-3 {
+  width: 83%;
+}
+}
+
+@media (min-width: 1773px)  { 
+.range-box-3 {
+  width: 610px;
+}
+}
+
+
+.happyness-select {
+  width: 100%;
+  margin: 20px 30px 20px 40px;
+  min-width: 200px;
+  height: 33px;
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  background: #27ae60;
+  float: left;
+}
+
+.happyness-select input[type="range"]:after {
+  position: absolute;
+  content: 'Atmosphäre in der Redaktion';
+  display: block;
+  margin: 35px 0% 0px 30%;
+}
