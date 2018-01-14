@@ -23,7 +23,7 @@
   <!-- Style -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style-1.css">
-  <link rel="stylesheet" href="font.css">
+  <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="navbar/css/reset.css">
   <link rel="stylesheet" href="navbar/css/style.css">
   <link href="lity/dist/lity.css" rel="stylesheet">  
@@ -35,6 +35,7 @@
   <script src="lity/dist/lity.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/javascript.js"></script>
+  <script src="js/javascript-new.js"></script>
 
 
   <!-- Twitter -->
@@ -140,30 +141,187 @@
 	
 	
  <!-- Main -->	
-	<main>
-<!--	
-	  <h1 class="header">Was Journalisten verdienen</h1>
-<!-- Parallax? https://codepen.io/MoorLex/pen/RWOeKv OR https://codepen.io/dudleystorey/pen/yaWzzR --> 
-	
-	
+<main>
   
-<!-- Analyse-Box -->	
-	<h1></h1>
-	<div class="giv-get">
-		<div class="giv">
-			<div class="banner-left">Überschrift</div><div class="banner-left-shadow"></div>
-			<div class="banner-left zbanner-left">Überschrift</div><div class="banner-left-shadow"></div>
-		</div>	
+<!-- Input-Input-Box -->	
+<h1></h1>
+<div class="giv-get">
+<div class="giv">
+<div class="banner-left-1">Wie verdienst du dein Geld?</div><div class="banner-left-shadow"></div>
+
+<!-- Medium-Select -->			
+<input id="data_1" class="media-select" list="medium" placeholder="Welches Medium?" type="text"/>
+<datalist >
+  <option value="Frankfurter Allgemeine Zeitung (FAZ)">
+  <option value="Spiegel">
+  <option value="Spiegel TV">
+  <option value="Spiegel Online (SPON)">
+  <option value="Süddeutsche Zeitung (SZ)">  
+  <option value="Südwestrundfunk (SWR)"> 
+  <option value="Tagesspiegel">
+  <option value="Zeit Online (ZON)">
+</datalist>
+
+<!-- Anstellungsform-Select -->	
+<form id="vertragsform">
+  <div class="switch-field">
+      <input type="radio" id="data_2" name="switch" value="fest" checked/>
+      <label for="data_2">Fest</label>
+      <input type="radio" id="data_3" name="switch" value="pauschal"/>
+      <label for="data_3">Pauschal</label>
+      <input type="radio" id="data_4" name="switch" value="frei" />
+      <label for="data_4">Frei</label>
+  </div>
+</form>
+
+
+<!-- Gehalt-Select -->			
+<span class="loan-select-overflow">
+	<input id="data_5" class="loan-select" list="gehalt" placeholder="Gehalt pro Monat?" type="number"  min="0" oninput="validity.valid||(value='');" inputmode="numeric" />
+</span>
+
+<!-- Wochenstunden-Select -->	
+<div class="range-box-1 show">
+<div class="hour-week-select">
+	<input id="data_6" type="range" min="1" max="50" value="1">
+</div>
+</div>
+
+<!-- Arbeitstage-Arbeitsstunden-Select -->	
+<div class="range-box-2 show">
+	<div class="day-month-select">
+	<input id="data_7" type="range" min="1" max="30" value="1">
+	</div>
+	<div class="hours-day-select">
+	<input id="data_8" type="range" min="1" max="24" value="1">
+	</div>
+</div>
+	
+<div class="break"></div>
+<div class="banner-left-2 zbanner-left">Wie ist deine Arbeitssituation?</div><div class="banner-left-shadow"></div>
+
+<!-- Position-Select -->		
+<input id="data_9" class="position-select" list="position" placeholder="Welche Position?" type="text" />
+<datalist id="position">
+  <option value="Chefredakteur">
+  <option value="Ressortleiter">
+  <option value="Chef vom Dienst (CvD)">
+  <option value="Redakteur">
+  <option value="Voluntär">  
+</datalist>
+
+
+<div class="position-select select" tabindex="1">
+  <input class="selectopt" name="position" type="radio" id="data_10">
+  <label for="data_10" class="option">Chefredakteur</label>
+  <input class="selectopt" name="position" type="radio" id="data_11">
+  <label for="data_11" class="option">Ressortleiter</label>
+  <input class="selectopt" name="position" type="radio" id="data_12">
+  <label for="data_12" class="option">Chef vom Dienst (CvD)</label>
+  <input class="selectopt" name="position" type="radio" id="data_13">
+  <label for="data_13" class="option">Redakteur</label>
+  <input class="selectopt" name="position" type="radio" id="data_14">
+  <label for="data_14" class="option">Voluntär</label>
+  <input class="selectopt selectopt-last" name="position" type="radio" id="data_15">
+  <label for="data_15" class="option option-last"></label>
+</div>
+
+
+
+
+
+<!-- Happiness-Select -->		
+<input type="range" value="0" min="0" max="100" list="happiness" class="zufriedenheit hide"/>
+<datalist id="happiness">
+   <option value="0" /> 
+   <option value="5" /> 
+   <option value="10" />
+   <option value="15" /> 
+   <option value="20" /> 
+   <option value="25" /> 
+   <option value="30" />
+   <option value="35" /> 
+   <option value="40" /> 
+   <option value="45" /> 
+   <option value="50" /> 
+   <option value="55" /> 
+   <option value="60" /> 
+   <option value="65" /> 
+   <option value="70" /> 
+   <option value="75" /> 
+   <option value="80" /> 
+   <option value="85" /> 
+   <option value="90" /> 
+   <option value="95" /> 
+   <option value="100" /> 
+</datalist>
+
+
+
+</div>	
+
+<!-- Output-Input-Box -->	
+
 		<div class="get">
-			<div class="banner-right">Überschrift</div><div class="banner-right-shadow"></div>
-			<div class="banner-right zbanner-right">Überschrift</div><div class="banner-right-shadow"></div>
+			<div class="banner-right-1">Überschrift</div><div class="banner-right-shadow"></div>
+
+<!-- Medium-Select -->			
+<input id="data_1" class="media-select" list="medium" placeholder="Welches Medium?" type="text"/>
+<datalist >
+  <option value="Frankfurter Allgemeine Zeitung (FAZ)">
+  <option value="Spiegel">
+  <option value="Spiegel TV">
+  <option value="Spiegel Online (SPON)">
+  <option value="Süddeutsche Zeitung (SZ)">  
+  <option value="Südwestrundfunk (SWR)"> 
+  <option value="Tagesspiegel">
+  <option value="Zeit Online (ZON)">
+</datalist>
+
+<!-- Anstellungsform-Select -->	
+<form id="vertragsform">
+  <div class="switch-field">
+      <input type="radio" id="data_2" name="switch" value="fest" checked/>
+      <label for="data_2">Fest</label>
+      <input type="radio" id="data_3" name="switch" value="pauschal"/>
+      <label for="data_3">Pauschal</label>
+      <input type="radio" id="data_4" name="switch" value="frei" />
+      <label for="data_4">Frei</label>
+  </div>
+</form>
+
+
+<!-- Gehalt-Select -->			
+<span class="loan-select-overflow">
+	<input id="data_5" class="loan-select" list="gehalt" placeholder="Gehalt pro Monat?" type="number"  min="0" oninput="validity.valid||(value='');" inputmode="numeric" />
+</span>
+
+<!-- Wochenstunden-Select -->	
+<div class="range-box-1 show">
+<div class="hour-week-select">
+	<input id="data_6" type="range" min="1" max="50" value="1">
+</div>
+</div>
+
+<!-- Arbeitstage-Arbeitsstunden-Select -->	
+<div class="range-box-2 show">
+	<div class="day-month-select">
+	<input id="data_7" type="range" min="1" max="30" value="1">
+	</div>
+	<div class="hours-day-select">
+	<input id="data_8" type="range" min="1" max="24" value="1">
+	</div>
+</div>
+	
+<div class="break"></div>
+			<div class="banner-right-2 zbanner-right">Überschrift</div><div class="banner-right-shadow"></div>
 		</div>	
 	</div>
 		
 <!-- Tool-Tip https://codepen.io/pixelslave/pen/wgxAq?page=33 -->
 	
 		<div class="result show" id="result">
-					<div class="banner-left">Überschrift</div><div class="banner-left-shadow"></div>
+					<div class="banner-left-3">Überschrift</div><div class="banner-left-shadow"></div>
 		
 		</div>
 	
@@ -179,25 +337,25 @@
 		<div class="vtile video_1">
 		<a href="//www.youtube.com/watch?v=XSGBVzeBUbk" class="video" data-lity>
 			<span></span>
-			<img src="..\Radar\image\video_1.jpg">
+			<img src="..\Frontend\image\video_1.jpg">
 		</a>
 		</div>
 		<div class="vtile video_2">
 		<a href="//www.youtube.com/watch?v=XSGBVzeBUbk" class="video" data-lity>
 			<span></span>
-			<img src="..\Radar\image\video_2.jpg">
+			<img src="..\Frontend\image\video_2.jpg">
 		</a>
 		</div>
 		<div class="vtile video_3">
 		<a href="//www.youtube.com/watch?v=XSGBVzeBUbk" class="video" data-lity>
 			<span></span>
-			<img src="..\Radar\image\video_3.jpg">
+			<img src="..\Frontend\image\video_3.jpg">
 		</a>
 		</div>
 		<div class="vtile video_4">
 		<a href="//www.youtube.com/watch?v=XSGBVzeBUbk" class="video" data-lity>
 			<span></span>
-			<img src="..\Radar\image\video_4.jpg">
+			<img src="..\Frontend\image\video_4.jpg">
 		</a>
 		</div>
 	</div>
