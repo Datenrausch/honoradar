@@ -166,8 +166,9 @@
 
 
 <!-- Switch-Select -->	
-<form id="data_1">
-  <div class="switch-field switch-field-text-1">
+<form id="data_1" class="switch-feld-hover-1">
+<span class="switch-feld-hover-1-text">Wie ist dein Anstellungsverhältnis?</span>
+  <div class="switch-field switch-field-text-1 tooltip">
       <input type="radio" id="data_2" name="switch" value="fest" checked/>
       <label for="data_2">Fest</label>
       <input type="radio" id="data_3" name="switch" value="pauschal"/>
@@ -189,12 +190,12 @@
 
 
 <!-- Day-Month-Select -->	
-<div class="day-month-select hide">
+<div class="day-month-select show">
 	<input id="data_7" type="range" min="1" max="30" value="1" >
 </div>
 	
 <!-- Hour-Day-Select -->
-<div class="hour-day-select hide">
+<div class="hour-day-select show">
 	<input id="data_8" type="range" min="1" max="24" value="1">
 </div>
 
@@ -260,6 +261,8 @@
 <p class="disclaimer"><a href="#">!</a>Achte darauf, dass du deine Identität im Kommentar nicht verrätst!</p>
 
 <input type="submit" class="submit" value="Daten spenden">
+
+<body style="text-align:center;">
 
 </div>	
 
