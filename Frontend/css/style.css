@@ -180,11 +180,11 @@ main {
 }
 
 .zbanner-left {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .zbanner-right {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 /*Video-Box*/
@@ -582,6 +582,7 @@ a.video span {
   padding: 30px 40px 20px 40px;
   overflow: hidden;
   float: left;
+  font-size: 13px;
 }
 
 
@@ -722,17 +723,6 @@ a.video span {
 }
 }
 
-.loan-select:after {
-    position: relative;  
-	float: left;
-    top: 0;
-    content:"€";
-    margin: 32px 0px 0px -68px;
-	font-size: 13px;
-	background: #e3e3e3;
-	padding: 8.5px 9px 8.5px 10px;
-	border-radius: 0px 4px 4px 0px;
-}
 
 /*Input-Input Range-Boxes*/
 
@@ -766,7 +756,7 @@ input[type="range"]::-webkit-slider-thumb{
 @media (max-width: 800px)  { 
 .hour-week-select {
   width: calc(100% - 80px);
-  margin: 30px 40px 0px 40px;
+  margin: 40px 40px 0px 40px;
 }
 }	
 	
@@ -780,7 +770,7 @@ input[type="range"]::-webkit-slider-thumb{
 @media (min-width: 1075px)  { 
 .hour-week-select {
   width: calc(100% - 80px);
-  margin: 30px 40px 0px 40px;
+  margin: 40px 40px 0px 40px;
 }
 }	
 
@@ -881,7 +871,7 @@ input[type="range"] {
   position: relative;
   outline: none;
   margin: 7px 10px;
-  width: calc(100% - 70px);
+  width: calc(100% - 50px);
   color: #fff;
   background: #e74c3c;
   text-align: center;
@@ -898,7 +888,7 @@ input[type="range"] {
 input[type="range"]:before {
   position: absolute;
   bottom: -15%;
-  right: -40px;
+  right: -30px;
   content: attr(value);
   display: block;
   text-align: center;
@@ -909,21 +899,21 @@ input[type="range"]:before {
   position: absolute;
   content: 'Arbeitsstunden pro Woche';
   display: block;
-  margin: 35px 0% 0px 40%;
+  margin: 2px 0px 0px calc(50% - 71px);
 }
 
 .day-month-select input[type="range"]:after {
   position: absolute;
   content: 'Arbeitstage pro Monat ';
   display: block;
-  margin: 35px 0% 0px 43%;
+  margin: 2px 0px 0px calc(50% - 60px);
 }
 
 .hour-day-select input[type="range"]:after {
   position: absolute;
   content: 'Arbeitsstunden pro Tag ';
   display: block;
-  margin: 35px 0% 0px 42%;
+  margin: 2px 0px 0px calc(50% - 60px);
 }
 
 .break {
@@ -1082,7 +1072,7 @@ input[type="range"]:before {
 
 .happiness-select {
   width: calc(100% - 80px);
-  margin: 40px 40px 0px 40px;
+  margin: 30px 40px 0px 40px;
   height: 33px;
   -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.2);
   -moz-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.2);
@@ -1096,7 +1086,7 @@ input[type="range"]:before {
   position: absolute;
   content: 'Atmosphäre in der Redaktion';
   display: block;
-  margin: 35px 0% 0px 30%;
+  margin: 2px 0px 0px calc(50% - 70px);
 }
 
 .happiness-select input:hover  {
@@ -1109,7 +1099,7 @@ input[type="range"]:before {
 	width: calc(100% - 80px);
 	resize: none;
 	height: 100px;
-	margin: 50px 30px 0px 40px;
+	margin: 30px 30px 0px 40px;
 	font-family: 'Open Sans';
 	font-size: 13px;
 	padding: 20px 30px 10px 30px;
@@ -1120,6 +1110,27 @@ input[type="range"]:before {
 	appearance: none;
     outline:0px none transparent;
 	overflow: hidden;
+}
+
+.disclaimer {
+  position: absolute;
+  content: '';
+  display: block;
+  margin: 10px 50px;
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 13px;
+}
+
+.disclaimer a {
+  border: solid 2px #fff;
+  border-radius: 20px;
+  padding: 0px 6px 0px 6px;
+  margin-right: 5px;
+  font-size: 500;
+  text-decoration: none;
+  color: #fff;
+  
 }
 
 /*Input Submit*/
