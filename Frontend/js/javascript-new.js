@@ -3,3 +3,4 @@ document.querySelector('input[type=range]').addEventListener('input', function r
   // trigger the CSS to update
   this.setAttribute('value', this.value);
 });}
+
