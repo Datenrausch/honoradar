@@ -428,6 +428,7 @@ main {
   .cd-nav .cd-half-block {
     width: 50%;
     float: left;
+	text-align: left;
   }
   
 address {

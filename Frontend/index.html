@@ -169,9 +169,9 @@ MICHEL ist schlau schlau
 
 
 
-<!-- Switch-Select -->
-<form id="data_1">
-  <div class="switch-field">
+<!-- Switch-Select -->	
+<form>
+  <div class="switch-field switch-field-text-1 tooltip">
       <input type="radio" id="data_2" name="switch" value="fest" checked/>
       <label for="data_2">Fest</label>
       <input type="radio" id="data_3" name="switch" value="pauschal"/>
@@ -183,10 +183,10 @@ MICHEL ist schlau schlau
 
 
 <!-- Loan-Select -->
-<input id="data_5" class="loan-select" list="gehalt" placeholder="Gehalt pro Monat?" type="number"  min="0" oninput="validity.valid||(value='');" inputmode="numeric" />
+<input id="data_5" class="loan-select hide" list="gehalt" placeholder="Gehalt pro Monat?" type="number"  min="0" oninput="validity.valid||(value='');" inputmode="numeric" />
 
 <!-- Hour-Week-Select -->
-<div class="hour-week-select show">
+<div class="hour-week-select hide">
 	<input id="data_6" type="range" min="1" max="50" value="1">
 </div>
 <div class="break show"></div>
@@ -202,13 +202,74 @@ MICHEL ist schlau schlau
 	<input id="data_8" type="range" min="1" max="24" value="1">
 </div>
 
+<!-- Freelancer-Loan-Select -->
+<input id="data_9" class="loan-select show" list="gehalt" placeholder="Lohn für den Auftrag?" type="number"  min="0" oninput="validity.valid||(value='');" inputmode="numeric" />
+
+<!-- Unit-Select -->
+<form class="show">
+  <div class="switch-field switch-field-text-2 tooltip">
+      <input type="radio" id="data_10" name="switch" value="text"/>
+      <label for="data_10">Text</label>
+      <input type="radio" id="data_11" name="switch" value="audio"/>
+      <label for="data_11">Audio</label>
+      <input type="radio" id="data_12" name="switch" value="video" />
+      <label for="data_12">Video</label>
+  </div>
+</form>
+
+<!-- Text-Amount-Select -->
+<div class="text-amount-select show">
+	<input id="data_13" class="amount-text-bar" type="range" min="100" max="25000" value="0" step="100" >
+</div>
+
+<!-- Text-Amount-Select -->
+<div class="video-amount-select hide">
+	<input id="data_14" class="amount-av-bar" type="range" min="0.5" max="90" value="0" step="0.5">
+</div>
+
+<!-- Text-Amount-Select -->
+<div class="video-amount-select hide">
+	<input id="data_15" class="amount-av-bar" type="range" min="0.5" max="90" value="0" step="0.5">
+</div>
+
+<!-- Genre-Select -->
+<input id="data_16" class="genre-select" list="genre" placeholder="Welches Genre?" type="text"/>
+<datalist id="genre">
+  <option value="Bericht">
+  <option value="Doku">
+  <option value="Feature">
+  <option value="Interview">
+  <option value="Kommentar">
+  <option value="Moderation">
+  <option value="Nachricht">
+  <option value="Portrait">
+  <option value="Reportage">
+</datalist>
+
+<!-- Digitalization-Select -->
+<form id="data_32" class="show">
+  <div class="switch-field switch-field-text-3 tooltip">
+      <input type="radio" id="data_17" name="switch" value="Analog"/>
+      <label for="data_17">Analog</label>
+      <input type="radio" id="data_18" name="switch" value="Digital"/>
+      <label for="data_18">Digital</label>
+      <input type="radio" id="data_19" name="switch" value="Analog & Digital" />
+      <label for="data_19">Beides</label>
+  </div>
+</form>
+
+<!-- Time-Select -->
+<div class="time-select show">
+	<input id="data_20" class="amount-time-bar" type="range" min="0.5" max="100" value="0" step="0.5" >
+</div>
+
 
 <div class="break"></div>
 <div class="banner-left-2 zbanner-left show">Wie ist deine Arbeitssituation?</div>
 <div class="banner-left-2 zbanner-left hide">Wie ist deine Einschätzung der Redaktion?</div><div class="banner-left-shadow show"></div>
 
 <!-- Position-Select -->
-<input id="data_9" class="position-select" list="position" placeholder="Welche Position?" type="text" />
+<input id="data_21" class="position-select hide" list="position" placeholder="Welche Position?" type="text" />
 <datalist id="position">
   <option value="Chefredakteur">
   <option value="Ressortleiter">
@@ -239,26 +300,33 @@ MICHEL ist schlau schlau
 -->
 
 <!-- Hour-Week-Select -->
-<form id="data_6">
-  <div class="switch-field">
-      <input type="radio" id="data_17" name="switch" value="1"/>
-      <label for="data_17">1 Jahr</label>
-      <input type="radio" id="data_18" name="switch" value="3"/>
-      <label for="data_18">3 Jahre</label>
-      <input type="radio" id="data_19" name="switch" value="5"/>
-      <label for="data_19">5 Jahre</label>
+<form>
+  <div class="switch-field switch-field-text-2 experience-right">
+      <input type="radio" id="data_22" name="switch" value="1"/>
+      <label for="data_22">1 Jahr</label>
+      <input type="radio" id="data_23" name="switch" value="3"/>
+      <label for="data_23">3 Jahre</label>
+      <input type="radio" id="data_24" name="switch" value="5"/>
+      <label for="data_24">5 Jahre</label>
   </div>
 </form>
 
 <!-- Happiness-Select -->
-<div class="happyness-select show">
-	<input id="data_20" type="range" min="1" max="100" value="1" >
+<div class="happiness-select hide">
+	<input id="data_25" type="range" min="1" max="100" value="1" >
+</div>
+
+<!-- Luckiness-Select -->
+<div class="luckiness-select show">
+	<input id="data_26" type="range" min="1" max="100" value="1" >
 </div>
 
 
+<div class="break"></div>
+
 <!-- Comment-Select -->
 <form action="/action_page.php" class="show">
-  <textarea id="data_21" class="comment-select show" name="message" placeholder="Dein Kommentar ..." maxlength="250"></textarea>
+  <textarea id="data_27" class="comment-select show" name="message" placeholder="Dein Kommentar ..." maxlength="250"></textarea>
 </form>
 <p class="disclaimer"><a href="#">!</a>Achte darauf, dass du deine Identität im Kommentar nicht verrätst!</p>
 
@@ -350,7 +418,12 @@ MICHEL ist schlau schlau
 </form>
 
 <!-- Happiness-Select -->
-<div class="happiness-select show">
+<div class="happiness-select hide">
+	<input id="data_20" class="hide" type="range" min="1" max="100" value="1" >
+</div>
+
+<!-- Luckiness-Select -->
+<div class="luckiness-select hide">
 	<input id="data_20" type="range" min="1" max="100" value="1" >
 </div>
 
