@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9uj0vq&w+#2_kdu$yzqe^_e%(mkw8lp_+veqcrq3xra)a5ktet'
+SECRET_KEY = 'op28&2*&+v4dhjztm%w6v7&*b%@jh&sd3l@7fs=hn(as%w2fqt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'honoradar.apps.HonoradarConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
