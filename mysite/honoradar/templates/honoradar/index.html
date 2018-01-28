@@ -2,7 +2,11 @@
 
 <html lang="de">
 <head>
+  {% load static %}
 
+  <link rel="stylesheet" type="text/css" href="{% static 'honoradar/style.css' %}" />
+<!--    <link rel="stylesheet" media="(max-width:480px)" type="text/css" href="{% static 'compareprices/480Max.css' %}" />
+    <link rel="stylesheet" media="(min-width:481px)" type="text/css" href="{% static 'compareprices/480Min.css' %}" />-->
   <!-- Meta -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,16 +20,16 @@
   <link rel="apple-touch-icon" sizes="180x180" href="#">
   <link rel="icon" type="image/png" sizes="32x32" href="#">
   <link rel="icon" type="image/png" sizes="16x16" href="#">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="manifest" href="{% static 'honoradar/manifest.json'%}">
+  <link rel="mask-icon" href="{% static 'honoradar/safari-pinned-tab.svg'%}" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
 
   <!-- Style -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/style-1.css">
-  <link rel="stylesheet" href="css/font.css">
-  <link rel="stylesheet" href="navbar/css/reset.css">
-  <link rel="stylesheet" href="navbar/css/style.css">
+  <link rel="stylesheet" href="{% static 'honoradar/css/style.css'%}">
+  <link rel="stylesheet" href="{% static 'honoradar/css/style-1.css'%}">
+  <link rel="stylesheet" href="{% static 'honoradar/css/font.css'%}">
+  <link rel="stylesheet" href="{% static 'honoradar/navbar/css/reset.css'%}">
+  <link rel="stylesheet" href="{% static 'honoradar/navbar/css/style.css'%}">
   <link href="lity/dist/lity.css" rel="stylesheet">
 
   <!-- Javascript -->
@@ -409,9 +413,6 @@
 
 <div style="height: 900px;"></div>
 
-{% load static %}
-
-<link rel="stylesheet" type="text/css" href="{% static 'honoradar/style.css' %}" />
 
 {% if latest_question_list %}
     <ul>
