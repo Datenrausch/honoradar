@@ -44,17 +44,10 @@ Main Components
 
 -------------------------------- */
 
-
-
-
-
-
-
 main {
   position: relative;
   z-index: 2;
   /* fix bug on iOS */
-  padding: 80px 7% 0px 7%;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   background-color: #e3e3e3;
