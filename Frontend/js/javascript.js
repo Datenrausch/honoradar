@@ -58,3 +58,41 @@ var parallax = {
 $(document).ready(parallax.init());
 });//]]> 
 
+window.onload=function(){
+document.querySelector('#data_6').addEventListener('input', function rangeChange() {
+  // trigger the CSS to update
+  this.setAttribute('value', this.value);
+});
+document.querySelector('#data_7').addEventListener('input', function rangeChange() {
+  // trigger the CSS to update
+  this.setAttribute('value', this.value);
+});
+document.querySelector('#data_8').addEventListener('input', function rangeChange() {
+  // trigger the CSS to update
+  this.setAttribute('value', this.value);
+});
+document.querySelector('#data_13').addEventListener('input', function rangeChange() {
+  // trigger the CSS to update
+  this.setAttribute('value', this.value);
+});
+document.querySelector('#data_14').addEventListener('input', function rangeChange() {
+  // trigger the CSS to update
+  this.setAttribute('value', this.value);
+});
+document.querySelector('#data_15').addEventListener('input', function rangeChange() {
+  // trigger the CSS to update
+  this.setAttribute('value', this.value);
+});
+document.querySelector('#data_21').addEventListener('input', function rangeChange() {
+  // trigger the CSS to update
+  this.setAttribute('value', this.value);
+});
+document.querySelector('#data_29').addEventListener('input', function rangeChange() {
+  // trigger the CSS to update
+  this.setAttribute('value', this.value);
+});
+document.querySelector('#data_30').addEventListener('input', function rangeChange() {
+  // trigger the CSS to update
+  this.setAttribute('value', this.value);
+});
+}
