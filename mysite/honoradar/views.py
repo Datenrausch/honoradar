@@ -6,6 +6,10 @@ from django.views import generic
 
 from .models import Question, Choice
 
+def senddata(request):
+    print("senddata")
+    print(request.POST.get('mediumname'))
+    return HttpResponseRedirect(reverse('honoradar:index'))
 
 class IndexView(generic.ListView):
     template_name = 'honoradar/index.html'
