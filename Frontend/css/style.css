@@ -1,5 +1,7 @@
 main {
 	font-family: 'Open Sans', sans-serif;
+    padding: 0px 5% 0px 5%;
+	
 }
 
 
@@ -189,7 +191,8 @@ main {
 /*Video-Box*/
 
 .vbox {
-	margin: 100px 0% 100px 0%;
+	width: 100%;
+	margin: 50px 0% 100px 0%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
@@ -199,16 +202,20 @@ main {
 }
 
 .vtile {
-	margin: 20px 2% 20px 2%;
+	margin: 20px 15px 20px 15px;
     position: relative;
     display: inline-block;
     cursor: pointer;
 	background-color: #394d66;
+	transition: .7s;
+	-webkit-transition: .7s;
+	-o-transition: .7s;
+	-moz-transition: .7s;
 }
 
- img {
-  width:300px;
-  height:200px;
+ .vtile img {
+  width: 300px;
+  height: 200px;
 }
 
 
@@ -501,18 +508,15 @@ a.video span {
 
 .freischreiber-box {
   height: 250px;
-  width: 30%;
+  width: 100%;
   min-width: 360px;
-  background-size: 500px ;
-  margin: 100px 0px 0px 60%;
+  background-size: 700px ;
   background-color: #ffffff;  
   background-repeat: no-repeat;
   background-image: url(../image/Freischreiberlogo.png);
-  background-position: 80% 30%;
-
+  background-position: 40% 30%;
   background-attachment: fixed;
   justify-content: left;
-
   position: relative;
   z-index: 2;
   overflow-y: hidden;
@@ -531,6 +535,10 @@ a.video span {
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
    transition-duration: 0.5s; 
+}
+
+.freischreiber-box:hover {
+	cursor: pointer;
 }
 
 /*Input-Input Medienauswahl*/
@@ -1622,9 +1630,8 @@ input[type="range"]:before {
     float: left;
 	  margin-left: 40px;
 }
-.checkboxlabel:after {
+.vtile:after {
   left: 0;
-  width: 20px;
   height: 20px;
   margin: 5px;
   content: '';
@@ -1632,6 +1639,18 @@ input[type="range"]:before {
   background: #FFF;
   border-radius: 10px;
 }
+
+.vtile:hover {
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  transition: .5s;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  -moz-transition: .5s;
+}
+
 .checkbox:checked + .checkboxlabel {
   background: rgb(39, 173, 95);
 }
