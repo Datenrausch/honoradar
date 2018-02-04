@@ -1,6 +1,8 @@
-window.onload=function(){
-document.querySelector('input[type=range]').addEventListener('input', function rangeChange() {
-  // trigger the CSS to update
-  this.setAttribute('value', this.value);
-});}
 
+document.getElementById("MyElement").classList.add('MyClass');
+
+document.getElementById("MyElement").classList.remove('MyClass');
+
+if ( document.getElementById("MyElement").classList.contains('MyClass') )
+
+document.getElementById("MyElement").classList.toggle('MyClass');

@@ -86,7 +86,7 @@ main {
 
 .banner-left-3 {
 	height: 40px;
-	width: 320px;
+	width: 420px;
 	background-color: #243040;
 	margin-left: -20px;
 	font-family: 'Open Sans';
@@ -95,7 +95,6 @@ main {
 	line-height: 40px;
 	color: #fff !important;
 	font-size: 0.7em;
-	
 }
 
 .banner-right-1 {
@@ -235,6 +234,27 @@ a.video span {
   background: url("../image/play.png") no-repeat;
   background-position: 50% 50%;
   background-size: 75px;
+}
+
+.vtile:after {
+  left: 0;
+  height: 20px;
+  margin: 5px;
+  content: '';
+  position: absolute;
+  background: #FFF;
+  border-radius: 10px;
+}
+
+.vtile:hover {
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  transition: .5s;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  -moz-transition: .5s;
 }
 
 /*Header-Titel-Effekt*/
@@ -807,7 +827,120 @@ input[type="range"]::-webkit-slider-thumb{
 .hour-week-bar[type="range"]:before {
   position: absolute;
   bottom: -15%;
-  right: -70px;
+  right: -30px;
+  content: attr(value);
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+
+
+.day-month-bar[type="range"] {
+  position: relative;
+  outline: none;
+  margin: 7px 10px 0px 13px;
+  width: calc(100% - 50px);
+  color: #fff;
+  background: #e74c3c;
+  text-align: center;
+  background: #2ecc71;
+  background-position: center;
+  background-repeat: no-repeat;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: 0px none transparent;
+  border-radius: 25px;
+}
+
+.day-month-bar[type="range"]:before {
+  position: absolute;
+  bottom: -15%;
+  right: -30px;
+  content: attr(value);
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+
+.hour-day-bar[type="range"] {
+  position: relative;
+  outline: none;
+  margin: 7px 10px 0px 13px;
+  width: calc(100% - 50px);
+  color: #fff;
+  background: #e74c3c;
+  text-align: center;
+  background: #2ecc71;
+  background-position: center;
+  background-repeat: no-repeat;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: 0px none transparent;
+  border-radius: 25px;
+}
+
+.hour-day-bar[type="range"]:before {
+  position: absolute;
+  bottom: -15%;
+  right: -30px;
+  content: attr(value);
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+
+.happiness-bar[type="range"] {
+  position: relative;
+  outline: none;
+  margin: 7px 10px 0px 13px;
+  width: calc(100% - 70px);
+  color: #fff;
+  background: #e74c3c;
+  text-align: center;
+  background: #2ecc71;
+  background-position: center;
+  background-repeat: no-repeat;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: 0px none transparent;
+  border-radius: 25px;
+}
+
+.happiness-bar[type="range"]:before {
+  position: absolute;
+  bottom: -15%;
+  right: -50px;
+  content: attr(value);
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+
+.luckiness-bar[type="range"] {
+  position: relative;
+  outline: none;
+  margin: 7px 10px 0px 13px;
+  width: calc(100% - 70px);
+  color: #fff;
+  background: #e74c3c;
+  text-align: center;
+  background: #2ecc71;
+  background-position: center;
+  background-repeat: no-repeat;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: 0px none transparent;
+  border-radius: 25px;
+}
+
+.luckiness-bar[type="range"]:before {
+  position: absolute;
+  bottom: -15%;
+  right: -50px;
   content: attr(value);
   display: block;
   text-align: center;
@@ -932,8 +1065,6 @@ input[type="range"]::-webkit-slider-thumb{
 }
 
 
-
-
 input[type="range"]:before {
   position: absolute;
   bottom: -15%;
@@ -952,17 +1083,16 @@ input[type="range"]:before {
   color: #fff;
 }
 
-
-
 .hour-week-select input {
 	margin-left: -15px;
 }
 
 .day-month-select input[type="range"]:after {
   position: absolute;
-  content: 'Arbeitstage pro Monat ';
+  content: 'Arbeitstage pro Monat';
   display: block;
-  margin: 2px 0px 0px calc(50% - 60px);
+  margin: 2px 0px 0px calc(50% - 71px);
+  color: #fff;
 }
 
 .day-month-select input {
@@ -1211,10 +1341,11 @@ input[type="range"]:before {
   background-color: rgb(39, 173, 95);
 }
 
-/*Input Submit*/
+/*Input submit-get*/
 
-.submit {
-	margin: 20px calc(50% - 100px) 0px;
+.submit-get {
+	position: relative;
+	margin: 60px calc(50% - 100px) 0px;
 	width: 200px;
 	height: 50px;
 	background: #243040;
@@ -1239,24 +1370,86 @@ input[type="range"]:before {
 }
 
 @media (max-width: 1420px)  { 
-.submit {
-	margin: 40px calc(50% - 100px) 0px;
+.submit-get {
+	margin: 60px calc(50% - 100px) 0px;
 }
 }
 
 @media (max-width: 1075px)  { 
-.submit {
-	margin: 40px calc(50% - 100px) 0px;
+.submit-get {
+	margin: 60px calc(50% - 100px) 0px;
 }
 }
 
 @media (max-width: 646px)  { 
-.submit {
-	margin: 40px calc(50% - 100px) 0px;
+.submit-get {
+	margin: 60px calc(50% - 100px) 0px;
 }
 }
 
-.submit:hover {
+.submit-get:hover {
+	background: #27ae60;
+	color: #fff;
+	transition: all ease 0.2s;
+	-webkit-transition: all ease 0.2s;
+	-o-transition: all ease 0.2s;
+	-moz-transition: all ease 0.2s;
+	transition-delay: all 300ms ease;
+	-webkit-transition-delay: all 300ms ease;
+	-moz-transition-delay: all 300ms ease;
+	-o-transition-delay: all 300ms ease;
+	border: solid 2px #27ae60;
+
+}
+
+
+/*Input submit-giv*/
+
+.submit-giv {
+	position: relative;
+	margin: 60px calc(50% - 100px) 0px;
+	width: 200px;
+	height: 50px;
+	background: #243040;
+	color: white;
+	font-family: InknutAntiqua-Bold;
+	font-size: 16px;
+    border-radius: 10px;
+    -moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+    outline:0px none transparent;
+	cursor: pointer;
+	transition: all ease 0.2s;
+	-webkit-transition: all ease 0.2s;
+	-o-transition: all ease 0.2s;
+	-moz-transition: all ease 0.2s;
+	transition-delay: all 300ms ease;
+	-webkit-transition-delay: all 300ms ease;
+	-moz-transition-delay: all 300ms ease;
+	-o-transition-delay: all 300ms ease;
+	border: solid 2px #243040;
+}
+
+@media (max-width: 1420px)  { 
+.submit-giv {
+	margin: 60px calc(50% - 100px) 0px;
+}
+}
+
+@media (max-width: 1075px)  { 
+.submit-giv {
+	margin: 60px calc(50% - 100px) 0px;
+}
+}
+
+@media (max-width: 646px)  { 
+.submit-giv {
+	margin: 60px calc(50% - 100px) 0px;
+}
+}
+
+.submit-giv:hover {
 	background: #27ae60;
 	color: #fff;
 	transition: all ease 0.2s;
@@ -1647,28 +1840,19 @@ input[type="range"]:before {
   transition: background-color 0.4s;
   -moz-transition: background-color 0.4s;
   -webkit-transition: background-color 0.4s;
-    float: left;
-	  margin-left: 40px;
+   float: left;
+  margin-left: 40px;
 }
-.vtile:after {
+
+.checkboxlabel:after {
   left: 0;
+  width: 20px;
   height: 20px;
   margin: 5px;
   content: '';
   position: absolute;
   background: #FFF;
   border-radius: 10px;
-}
-
-.vtile:hover {
-  transform: scale(1.02);
-  -webkit-transform: scale(1.02);
-  -o-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  transition: .5s;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  -moz-transition: .5s;
 }
 
 .checkbox:checked + .checkboxlabel {
@@ -1968,4 +2152,25 @@ a.news_1 {
   /* Needs prefixing */
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+.title-news h2 {
+	color: #27ae60;
+	font-size: 2.3em;
+	font-family: InknutAntiqua-Bold !important;
+	margin-top: 50px;
+}
+
+.title-giv h2 {
+	color: #27ae60;
+	font-size: 2.3em;
+	font-family: InknutAntiqua-Bold !important;
+	margin-top: 50px;
+}
+
+.title-get h2 {
+	color: #27ae60;
+	font-size: 2.3em;
+	font-family: InknutAntiqua-Bold !important;
+	margin-top: 50px;
 }
