@@ -28,16 +28,6 @@
   <link rel="stylesheet" href="navbar/css/style.css">
   <link href="lity/dist/lity.css" rel="stylesheet">  
   
-  <!-- Javascript -->
-  <script src="navbar/js/modernizr.js"></script>
-  <script src="js/html5shiv.js"></script>
-  <script src="lity/vendor/jquery.js"></script>
-  <script src="lity/dist/lity.js"></script>
-  <script src="js/jquery.js"></script>
-  <script src="js/javascript.js"></script>
-  <script src="js/javascript-new.js"></script>
-
-
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="XXX">
@@ -145,9 +135,6 @@
   
 <!-- Input-Input-Box -->	
 <h1>Honorardar</h1>
-
-<div class="title-giv"><h2>Spende deine Daten</h2></div>
-<div class="title-get"><h2>Analysiere die Daten</h2></div>
 <div class="giv-get">
 <!-- https://codepen.io/lottejackson/pen/PwvjPj -->
 <div class="giv">
@@ -172,68 +159,68 @@
 <!-- Switch-Select -->	
 <form>
   <div class="switch-field switch-field-text-1 tooltip">
-      <input type="radio" id="data_2" name="switch" value="fest" checked/>
+      <input type="radio" id="data_2" name="switch" value="fest" onclick="festfunction()"/>
       <label for="data_2">Fest</label>
-      <input type="radio" id="data_3" name="switch" value="pauschal"/>
+      <input type="radio" id="data_3" name="switch" value="pauschal" onclick="pauschalfunction()"/>
       <label for="data_3">Pauschal</label>
-      <input type="radio" id="data_4" name="switch" value="frei" />
+      <input type="radio" id="data_4" name="switch" value="frei" onclick="freifunction()"/>
       <label for="data_4">Frei</label>
   </div>
 </form>
 
 
 <!-- Loan-Select -->			
-<input id="data_5" class="loan-select show" list="gehalt" placeholder="Gehalt pro Monat?" type="number"  min="0" oninput="validity.valid||(value='');" inputmode="numeric" />
+<input id="data_5" class="loan-select hide" list="gehalt" placeholder="Gehalt pro Monat?" type="number"  min="0" oninput="validity.valid||(value='');" inputmode="numeric" />
 
 <!-- Hour-Week-Select -->	
-<div class="hour-week-select show">
+<div class="hour-week-select hide" id="pre-data_6">
 	<input id="data_6" class="hour-week-bar" type="range" min="1" max="50" value="1">
 </div>
-<div class="break show"></div>
+<div class="break hide" id="break-1"></div>
 
 
 <!-- Day-Month-Select -->	
-<div class="day-month-select show">
+<div class="day-month-select hide" id="pre-data_7">
 	<input id="data_7" class="day-month-bar" type="range" min="1" max="30" value="1" >
 </div>
 	
 <!-- Hour-Day-Select -->
-<div class="hour-day-select show">
+<div class="hour-day-select hide" id="pre-data_8">
 	<input id="data_8" class="hour-day-bar" type="range" min="1" max="24" value="1">
 </div>
 
 <!-- Freelancer-Loan-Select -->			
-<input id="data_9" class="loan-select show" list="gehalt" placeholder="Lohn für den Auftrag?" type="number"  min="0" oninput="validity.valid||(value='');" inputmode="numeric" />
+<input id="data_9" class="loan-select hide" list="gehalt" placeholder="Lohn für den Auftrag?" type="number"  min="0" oninput="validity.valid||(value='');" inputmode="numeric" />
 
 <!-- Unit-Select -->	
-<form class="show">
+<form class="hide" id="pre-data_10-12">
   <div class="switch-field switch-field-text-2 tooltip">
-      <input type="radio" id="data_10" name="switch" value="text"/>
+      <input type="radio" id="data_10" name="switch" value="text" onclick="textfunction()"/>
       <label for="data_10">Text</label>
-      <input type="radio" id="data_11" name="switch" value="audio"/>
+      <input type="radio" id="data_11" name="switch" value="audio" onclick="audiofunction()"/>
       <label for="data_11">Audio</label>
-      <input type="radio" id="data_12" name="switch" value="video" />
+      <input type="radio" id="data_12" name="switch" value="video" onclick="videofunction()"/>
       <label for="data_12">Video</label>
   </div>
 </form>
 
 <!-- Text-Amount-Select -->	
-<div class="text-amount-select show">
+<div class="text-amount-select hide" id="pre-data_13">
 	<input id="data_13" class="amount-text-bar" type="range" min="100" max="25000" value="1" step="100" >
 </div>
 
 <!-- Audio-Amount-Select -->	
-<div class="audio-amount-select show">
+<div class="audio-amount-select hide" id="pre-data_14">
 	<input id="data_14" class="amount-av-bar" type="range" min="0.5" max="90" value="1" step="0.5">
 </div>
 
 <!-- Video-Amount-Select -->	
-<div class="video-amount-select show">
+<div class="video-amount-select hide" id="pre-data_15">
 	<input id="data_15" class="amount-av-bar" type="range" min="0.5" max="90" value="1" step="0.5">
 </div>
 
 <!-- Genre-Select -->			
-<input id="data_16" class="genre-select show" list="genre" placeholder="Welches Genre?" type="text"/>
+<input id="data_16" class="genre-select hide" list="genre" placeholder="Welches Genre?" type="text"/>
 <datalist id="genre">
   <option value="Bericht"> 
   <option value="Doku">
@@ -247,29 +234,29 @@
 </datalist>
 
 <!-- Digitalization-Select -->	
-<form id="data_17" class="show">
+<form id="pre-data_17-19" class="hide">
   <div class="switch-field switch-field-text-3 tooltip">
-      <input type="radio" id="data_18" name="switch" value="Analog"/>
-      <label for="data_18">Analog</label>
-      <input type="radio" id="data_19" name="switch" value="Digital"/>
-      <label for="data_19">Digital</label>
-      <input type="radio" id="data_20" name="switch" value="Analog & Digital" />
-      <label for="data_20">Beides</label>
+      <input type="radio" id="data_17" name="switch" value="Analog"/>
+      <label for="data_17">Analog</label>
+      <input type="radio" id="data_18" name="switch" value="Digital"/>
+      <label for="data_18">Digital</label>
+      <input type="radio" id="data_19" name="switch" value="Analog & Digital"/>
+      <label for="data_19">Beides</label>
   </div>
 </form>
 
 <!-- Time-Select -->	
-<div class="time-select show">
-	<input id="data_21" class="amount-time-bar" type="range" min="0.5" max="100" value="1" step="0.5" >
+<div class="time-select hide" id="pre-data_20">
+	<input id="data_20" class="amount-time-bar" type="range" min="0.5" max="100" value="1" step="0.5" >
 </div>
 
 	
 <div class="break"></div>
-<div class="banner-left-2 zbanner-left show">Wie ist deine Arbeitssituation?</div>
-<div class="banner-left-3 zbanner-left show">Wie ist deine Einschätzung der Redaktion?</div><div class="banner-left-shadow show"></div>
+<div class="banner-left-2 zbanner-left hide" id="banner-left-2">Wie ist deine Arbeitssituation?</div>
+<div class="banner-left-3 zbanner-left hide" id="banner-left-3">Wie ist deine Arbeitssituation?</div><div id="banner-left-triangle" class="banner-left-shadow hide"></div>
 
 <!-- Position-Select -->		
-<input id="data_22" class="position-select show" list="position" placeholder="Welche Position?" type="text" />
+<input id="data_21" class="position-select hide" list="position" placeholder="Welche Position?" type="text" />
 <datalist id="position">
   <option value="Chefredakteur">
   <option value="Ressortleiter">
@@ -280,61 +267,60 @@
 
 <!-- Experience-Select -->	
 <form>
-  <div class="switch-field switch-field-text-4 show">
-      <input type="radio" id="data_23" name="switch" value="1"/>
-      <label for="data_23">1 Jahr</label>
-      <input type="radio" id="data_24" name="switch" value="3"/>
-      <label for="data_24">3 Jahre</label>
-      <input type="radio" id="data_25" name="switch" value="5"/>
-      <label for="data_25">5 Jahre</label>
+  <div class="switch-field switch-field-text-4 hide" id="pre-data_22-24">
+      <input type="radio" id="data_22" name="switch" value="1"/>
+      <label for="data_22">1 Jahr</label>
+      <input type="radio" id="data_23" name="switch" value="3"/>
+      <label for="data_23">3 Jahre</label>
+      <input type="radio" id="data_24" name="switch" value="5"/>
+      <label for="data_24">5 Jahre</label>
   </div>
 </form>
 
 <form>
-  <div class="switch-field switch-field-text-4 experience-right show">
-      <input type="radio" id="data_26" name="switch" value="1"/>
-      <label for="data_26">1 Jahr</label>
-      <input type="radio" id="data_27" name="switch" value="3"/>
-      <label for="data_27">3 Jahre</label>
-      <input type="radio" id="data_28" name="switch" value="5"/>
-      <label for="data_28">5 Jahre</label>
+  <div class="switch-field switch-field-text-4 experience-right hide" id="pre-data_25-27">
+      <input type="radio" id="data_25" name="switch" value="1"/>
+      <label for="data_25">1 Jahr</label>
+      <input type="radio" id="data_26" name="switch" value="3"/>
+      <label for="data_26">3 Jahre</label>
+      <input type="radio" id="data_27" name="switch" value="5"/>
+      <label for="data_27">5 Jahre</label>
   </div>
 </form>
 
 <!-- Happiness-Select -->	
-<div class="happiness-select show">
-	<input id="data_29" class="happiness-bar" type="range" min="1" max="100" value="1" >
+<div class="happiness-select hide" id="pre-data_28">
+	<input id="data_28" class="happiness-bar" type="range" min="1" max="100" value="1" >
 </div>
 
 <!-- Luckiness-Select -->	
-<div class="luckiness-select show">
-	<input id="data_30" class="luckiness-bar" type="range" min="1" max="100" value="1" >
+<div class="luckiness-select hide" id="pre-data_29">
+	<input id="data_29" class="luckiness-bar" type="range" min="1" max="100" value="1" >
 </div>
 
 
 <div class="break"></div>
 
 <!-- Comment-Select -->	
-<form action="/action_page.php" class="show">
-  <textarea id="data_31" class="comment-select show" name="message" placeholder="Dein Kommentar ..." maxlength="250"></textarea>
+<form action="/action_page.php" class="hide" id="pre-data_30">
+  <textarea id="data_30" class="comment-select" name="message" placeholder="Dein Kommentar ..." maxlength="250"></textarea>
 </form>
-<span class="show"><p class="disclaimer"><a href="#">!</a>Achte darauf, dass du deine Identität im Kommentar nicht verrätst!</p></span>
+<span class="hide" id="disclaimer"><p class="disclaimer"><a href="#">!</a>Achte darauf, dass du deine Identität im Kommentar nicht verrätst!</p></span>
 
 <!-- Checkbox-Select -->
-<span class="show">	
-<input class="checkbox" type="checkbox" id="data_32" />
-<label class="checkboxlabel" for="data_32"></label>
+<span class="hide" id="pre-data_31">	
+<input class="checkbox" type="checkbox" id="data_31" />
+<label class="checkboxlabel" for="data_31"></label>
 <p class="checkboxtext">Ich bin mit den <a href="#" target="_blank">AGBs</a> einverstanden.</p>
 </span>
 
 <!-- Submit -->	
-<input type="submit" class="submit-get show" value="Daten spenden">
+<input type="submit" class="submit-get hide" id="data_32" value="Daten spenden">
 
 </form>
 </div>	
 
 <!-- Output-Input-Box -->	
-
 <div class="get">
 <form id="get-form">
 	<div class="banner-right-1">Welches Medium interessiert dich?</div><div class="banner-right-shadow"></div>
@@ -366,18 +352,26 @@
   </div>
 </form>
 
-<input type="submit" class="submit-giv show" value="Daten abfragen">
+<input type="submit" class="submit-giv hide" value="Daten abfragen">
 
 </form>
 </div>
 	
-<div class="result show" id="result">
+<div class="result hide" id="result">
 	<div class="banner-left-3">Überschrift</div><div class="banner-left-shadow"></div>	
+	
+	
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV" class="dontstyle">
+This is a DIV element.
+</div>
 </div>
 
 
   <!-- News -->			
-<div class="title-news"><h2>News & Reports</h2></div>
+
 	<div class="nbox">	
 		<a href="#">
 		<div class="ntile news_1"><span class="news-title-head">Der große Gehalts-Report 2018</span>
@@ -410,7 +404,37 @@
 <a href="https://www.freischreiber.de" target="_blank" class="link"><div class="freischreiber-box"></div></a>
 
 
-  <!-- Videos -->			
+
+
+  <!-- Videos -->	
+
+
+	<div class="nbox">	
+		<a href="#">
+		<div class="ntile news_1"><span class="news-title-head">Der große Gehalts-Report 2018</span>
+		</div>
+		</a>
+		
+		<a href="#">
+		<div class="ntile news_2"><span class="news-title">Das sagt die Presse zum Gehalts-Report</span>
+		</div>
+		</a>
+		
+		<a href="#">
+		<div class="ntile news_3"><span class="news-title">Was geschieht mit deinen Daten?</span>
+		</div>
+		</a>
+
+		<a href="#">
+		<div class="ntile news_4"><span class="news-title">Warum Daten spenden?</span>
+		</div>
+		</a>
+		
+		<a href="#">
+		<div class="ntile news_5"><span class="news-title">Die Methodik dahinter</span>
+		</div>
+		</a>
+	</div>  
 
 	<div class="vbox">	
 		<div class="vtile video_1">
@@ -438,14 +462,24 @@
 		</a>
 		</div>
 	</div>
-
-		
-<!-- Made by https://codepen.io/littlesnippets/pen/ZbemQo?page=25 -->
-
-<div style="height: 900px;"></div>	
 	
-	</main>
+	
+</main>
+<div class="footer">
 
+
+
+</div>
+
+
+ <!-- Javascript -->
+  <script src="navbar/js/modernizr.js"></script>
+  <script src="js/html5shiv.js"></script>
+  <script src="lity/vendor/jquery.js"></script>
+  <script src="lity/dist/lity.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/javascript.js"></script>
+  <script src="js/javascript-new.js"></script>
   <script src="navbar/js/jquery-2.1.1.js"></script>
   <script src="navbar/js/main.js"></script>
 </body>
