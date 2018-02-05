@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function festfunction() {
 	var element = document.getElementById("data_5");
@@ -344,4 +345,11 @@ function videofunction() {
     element.classList.add("show");
     element.classList.remove("hide");
 }
+=======
+window.onload=function(){
+document.querySelector('input[type=range]').addEventListener('input', function rangeChange() {
+  // trigger the CSS to update
+  this.setAttribute('value', this.value);
+});}
+>>>>>>> cce5410328778dbf8bb84864aa5cf051d7c8476e
 

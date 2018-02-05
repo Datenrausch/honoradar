@@ -58,6 +58,7 @@ var parallax = {
 $(document).ready(parallax.init());
 });//]]> 
 
+<<<<<<< HEAD
 window.onload=function(){
 document.querySelector('#data_6').addEventListener('input', function rangeChange() {
   // trigger the CSS to update
@@ -96,3 +97,5 @@ document.querySelector('#data_29').addEventListener('input', function rangeChang
   this.setAttribute('value', this.value);
 });
 }
+=======
+>>>>>>> cce5410328778dbf8bb84864aa5cf051d7c8476e
