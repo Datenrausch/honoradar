@@ -58,7 +58,6 @@ var parallax = {
 $(document).ready(parallax.init());
 });//]]> 
 
-<<<<<<< HEAD
 window.onload=function(){
 document.querySelector('#data_6').addEventListener('input', function rangeChange() {
   // trigger the CSS to update
@@ -84,11 +83,7 @@ document.querySelector('#data_15').addEventListener('input', function rangeChang
   // trigger the CSS to update
   this.setAttribute('value', this.value);
 });
-document.querySelector('#data_20').addEventListener('input', function rangeChange() {
-  // trigger the CSS to update
-  this.setAttribute('value', this.value);
-});
-document.querySelector('#data_28').addEventListener('input', function rangeChange() {
+document.querySelector('#data_21').addEventListener('input', function rangeChange() {
   // trigger the CSS to update
   this.setAttribute('value', this.value);
 });
@@ -96,6 +91,8 @@ document.querySelector('#data_29').addEventListener('input', function rangeChang
   // trigger the CSS to update
   this.setAttribute('value', this.value);
 });
+document.querySelector('#data_30').addEventListener('input', function rangeChange() {
+  // trigger the CSS to update
+  this.setAttribute('value', this.value);
+});
 }
-=======
->>>>>>> cce5410328778dbf8bb84864aa5cf051d7c8476e
