@@ -2,3 +2,4 @@
 */_credentials.py
 DS_Store*
 mysite/honoradar/.DS_Store
+*.pyc
