@@ -1,36 +1,238 @@
+/*video-Grid*/
+
+.vbox {
+	width: 100%;
+	margin: 30px 2% 50px 2%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.vtile {
+	height: 100%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+@media (max-width: 900px)  {
+
+
+.vbox :nth-child(1) {
+	width: calc(100%);
+	margin: 30px 0px 0px 0px;
+}
+
+.vbox :nth-child(2) {
+	width: calc(100%);
+	margin: 30px 0px 0px 0px;
+}
+
+.vbox :nth-child(3) {
+	width: calc(100%);
+	margin: 30px 0px 0px 0px;
+}
+
+.vbox :nth-child(4) {
+	width: calc(100%);
+	margin: 30px 0px 0px 0px;
+}
+
+
+}
+
+@media (min-width: 900px)  { 
+
+.vbox :nth-child(1) {
+	width: calc(50% - 15px);
+	margin: 30px 15px 0px 0px;
+
+}
+
+.vbox :nth-child(2) {
+	width: calc(50% - 15px);
+	margin: 30px 0px 0px 15px;
+}
+
+.vbox :nth-child(3) {
+	width: calc(50% - 15px);
+	margin: 30px 15px 0px 0px;
+}
+
+.vbox :nth-child(4) {
+	width: calc(50% - 15px);
+	margin: 30px 0px 0px 15px;
+}
+
+
+}	
+
+@media (min-width: 1590px)  { 
+
+
+.vbox :nth-child(1) {
+	width: calc(25% - 21px);
+	max-width: calc(23%);
+	margin: 30px 15px 0px 0px;
+
+}
+
+.vbox :nth-child(2) {
+	width: calc(25% - 21px);
+	margin: 30px 15px 0px 15px;
+}
+
+.vbox :nth-child(3) {
+	width: calc(25% - 21px);
+	margin: 30px 15px 0px 15px;
+
+}
+
+.vbox :nth-child(4) {
+	width: calc(25% - 21px);
+	margin: 30px 0px 0px 15px;
+}
+
+
+}
+
+.link-video_1 {
+  background-size: 130% ;
+  background-repeat: no-repeat;
+  background-image: url(../image/video_1.jpg);
+  background-position: center center;
+  background-origin: padding-box;
+  transition: .7s;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  -moz-transition: .7s;
+}
+
+.link-video_2 {
+  background-size: 130% ;
+  background-repeat: no-repeat;
+  background-image: url(../image/video_2.jpg);
+  background-position: center center;
+  background-origin: padding-box;
+  transition: .7s;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  -moz-transition: .7s;
+}
+
+.link-video_3 {
+  background-size: 130% ; 
+  background-repeat: no-repeat;
+  background-image: url(../image/video_3.jpg);
+  background-position: center center;	
+  transition: .7s;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  -moz-transition: .7s;
+}
+
+.link-video_4 {
+  background-size: 130% ;
+  background-repeat: no-repeat;
+  background-image: url(../image/video_4.jpg);
+  background-position: center center;   
+  transition: .7s;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  -moz-transition: .7s;
+}
+
+
+.link-video_1:hover {
+	transition: .5s;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	-moz-transition: .5s;
+	transform: scale(1.02);
+	-webkit-transform: scale(1.02);
+	-o-transform: scale(1.02);
+	-moz-transform: scale(1.02);
+}
+
+
+.link-video_2:hover {
+	transition: .5s;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	-moz-transition: .5s;
+	transform: scale(1.02);
+	-webkit-transform: scale(1.02);
+	-o-transform: scale(1.02);
+	-moz-transform: scale(1.02);
+}
+
+.link-video_3:hover {
+	transition: .5s;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	-moz-transition: .5s;
+	transform: scale(1.02);
+	-webkit-transform: scale(1.02);
+	-o-transform: scale(1.02);
+	-moz-transform: scale(1.02);
+}
+
+.link-video_4:hover {
+	transition: .5s;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	-moz-transition: .5s;
+	transform: scale(1.02);
+	-webkit-transform: scale(1.02);
+	-o-transform: scale(1.02);
+	-moz-transform: scale(1.02);
+}
+
+
+.video-title {
+	color: white;
+	font-family: InknutAntiqua-Bold;
+	font-size: 0.7em;
+	background-color: #27ae60;
+	line-height: 2em;
+	border-radius: 10px;
+}
+
+
+/*Zusatz*/
+
+
+.video-play {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  background: url("../image/play.png") no-repeat;
+  background-position: 50% 50%;
+  background-size: 100px;
+}
+
+.video {
+	outline: none;
+	height: 270px;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
+/*
+.vtile:after {
+  left: 0;
+  height: 20px;
+  margin: 5px;
+  content: '';
+  position: absolute;
+  background: #FFF;
+  border-radius: 10px;
+}
+*/
 
 
 
